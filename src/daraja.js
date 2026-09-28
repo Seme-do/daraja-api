@@ -1,4 +1,4 @@
-import { validateAmount, normalizePhoneNumber } from "./validators";
+import { validateAmount, normalizePhoneNumber } from "./validators.js";
 
 const config = {
     env: process.env.DARAJA_ENV || "sandbox",
