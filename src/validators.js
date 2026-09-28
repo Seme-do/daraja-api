@@ -1,11 +1,11 @@
 export function normalizePhoneNumber(phone) {
-    const cleaned = String(phone).replace(/\s+/g, "");
+    const cleaned = String(phone).replace(/\D/g, "");
 
     if (cleaned.startsWith("254") && cleaned.length === 12) {
         return cleaned;
     }
 
-    if (cleaned.startsWith("07") && cleaned.length === 10) {
+    if (cleaned.startsWith("0") && cleaned.length === 10) {
         return `254${cleaned.slice(1)}`;
     }
 
